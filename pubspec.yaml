@@ -51,7 +51,14 @@ dev_dependencies:
   flutter_ume_kit_dio: ^0.3.0
   build_runner: ^2.0.0
   json_serializable: ^6.0.0
-
+dependency_overrides: 
+  device_preview: ^1.1.0
+  flutter_ume: ^1.0.0-dev.0
+  flutter_ume_kit_ui: ^1.0.0-dev.0
+  pull_to_refresh:
+    git:
+      url: https://github.com/miquelbeltran/flutter_pulltorefresh
+      ref: 6d7fbdd  
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 

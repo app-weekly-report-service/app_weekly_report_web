@@ -1,3 +1,4 @@
+import 'package:app_weekly_report_web/page/login/login_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_winner_app/flutter_winner_app.dart';
 
@@ -5,7 +6,7 @@ class AppConfig extends WinnerAppConfig {
   /// App 启动入口页面
   @override
   Widget appHome(BuildContext context) {
-    return Container();
+    return const LoginPage();
   }
 
   /// 配置请求服务器地址
