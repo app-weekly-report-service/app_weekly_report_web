@@ -12,7 +12,15 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends BasePage<LoginPage, LoginPageViewModel> {
   @override
   Widget buildPage(BuildContext context) {
-    return Container();
+    return Container(
+      decoration: const BoxDecoration(
+        gradient: LinearGradient(colors: [
+          Color(0xFFEB95FA),
+          Color(0xFF63D0F9),
+          Color(0xFF78FB93),
+        ]),
+      ),
+    );
   }
 
   @override
