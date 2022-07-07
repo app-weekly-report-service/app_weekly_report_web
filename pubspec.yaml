@@ -27,10 +27,12 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  darty_json_safe: ^0.1.0
   flutter:
     sdk: flutter
   flutter_winner_app:
     path: sub_modules/flutter_winner_app
+  json_annotation: ^4.5.0
 
 dev_dependencies:
   flutter_test:
@@ -51,14 +53,15 @@ dev_dependencies:
   flutter_ume_kit_dio: ^0.3.0
   build_runner: ^2.0.0
   json_serializable: ^6.0.0
+  fluttertoast: ^8.0.9
 dependency_overrides: 
-  device_preview: ^1.1.0
-  flutter_ume: ^1.0.0-dev.0
-  flutter_ume_kit_ui: ^1.0.0-dev.0
-  pull_to_refresh:
-    git:
-      url: https://github.com/miquelbeltran/flutter_pulltorefresh
-      ref: 6d7fbdd  
+  # device_preview: 1.0.0
+#   flutter_ume: ^1.0.0-dev.0
+#   flutter_ume_kit_ui: ^1.0.0-dev.0
+#   pull_to_refresh:
+#     git:
+#       url: https://github.com/miquelbeltran/flutter_pulltorefresh
+#       ref: 6d7fbdd  
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 

@@ -20,6 +20,49 @@ class _LoginPageState extends BasePage<LoginPage, LoginPageViewModel> {
           Color(0xFF78FB93),
         ]),
       ),
+      child: Center(child: _loginContent(context)),
+    );
+  }
+
+  Widget _loginContent(BuildContext context) {
+    return Container(
+      width: 500,
+      padding: const EdgeInsets.symmetric(vertical: 50, horizontal: 50),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(25),
+        color: Colors.white,
+      ),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          const Text("登录", style: TextStyle(fontSize: 30)),
+          hiSpace(height: 20),
+          TextField(
+            decoration: const InputDecoration(
+              labelText: "用户名",
+              prefixIcon: Icon(Icons.person),
+            ),
+            controller: viewModel.userNameEC,
+          ),
+          hiSpace(height: 20),
+          TextField(
+            decoration: const InputDecoration(
+              labelText: "密码",
+              prefixIcon: Icon(Icons.lock),
+            ),
+            controller: viewModel.passwordEC,
+          ),
+          hiSpace(height: 50),
+          SizedBox(
+            width: double.infinity,
+            height: 50,
+            child: ElevatedButton(
+              onPressed: () => viewModel.onLogin(),
+              child: const Text("登录"),
+            ),
+          ),
+        ],
+      ),
     );
   }
 
