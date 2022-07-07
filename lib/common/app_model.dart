@@ -10,12 +10,13 @@ class AppModel<T> extends WinnerBaseModel<T> {
   ) {
     code = JSON(data)['code'].intValue;
     message = JSON(data)['message'].stringValue;
-    isSuccess = JSON(data)['success'].boolValue;
+    isSuccess = JSON(data)['isSuccess'].boolValue;
     final _data = JSON(data)['data'].rawValue;
+    if (_data == null) return;
     if (_data is List) {
       list = _data.map((e) => api.converter.fromJson(e)).toList() as List<T>?;
     } else {
-      this.data = api.converter.fromJson(data) as T?;
+      this.data = api.converter.fromJson(_data) as T?;
     }
   }
 }
