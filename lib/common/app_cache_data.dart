@@ -8,7 +8,7 @@ class AppCacheData extends JsonConverter<AppCacheData, Map<String,dynamic>> {
 
   @override
   AppCacheData fromJson(Map<String, dynamic> json) {
-    return AppCacheData()..token = JSON()['token'].stringValue;
+    return AppCacheData()..token = JSON(json)['token'].stringValue;
   }
 
   @override
